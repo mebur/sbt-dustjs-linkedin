@@ -11,9 +11,10 @@ This plugin is a continuation of [play-dustjs][play-dustjs] built for [sbt-web][
 Add the sbt plugin to your `project/plugins.sbt` file:
 
 ```scala
-resolvers += Resolver.bintrayIvyRepo("sisyfos-digital", "sbt-plugins")
+lazy val sbtDustjs = ProjectRef(uri("https://github.com/mebur/sbt-dustjs-linkedin.git"),"sbt-dustjs-linkedin")
 
-addSbtPlugin("se.sisyfosdigital.sbt" % "sbt-dustjs-linkedin" % "1.0.6")
+lazy val root = project.in(file(".")).dependsOn(sbtDustjs)
+
 ```
 
 Two options are available:
@@ -27,8 +28,8 @@ amdModule           | Compile the templates as AMD modules. The templates will r
 Example:
 
 ```scala
-DustJsKeys.helpers in Assets := true
-DustJsKeys.amdModule in Assets := true
+Assets / DustJsKeys.helpers := true
+Assets / DustJsKeys.amdModule := true
 ```
 
 ## Usage
@@ -124,6 +125,10 @@ JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
 ```
 
 ## Changelog
+
+1.0.7 - March, 2023
+
+- Updated sbt version to 1.6.2
 
 1.0.6 - January 4, 2019
 
