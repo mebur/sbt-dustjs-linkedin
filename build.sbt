@@ -4,6 +4,5 @@ ThisBuild / description := "An SBT plugin to compile Dustjs templates."
 ThisBuild / licenses += ("MIT", url("https://opensource.org/licenses/MIT"))
 
 sbtPlugin := true
-publishMavenStyle := false
 
 addSbtJsEngine("1.3.7")
