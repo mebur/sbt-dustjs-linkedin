@@ -6,3 +6,5 @@ ThisBuild / licenses += ("MIT", url("https://opensource.org/licenses/MIT"))
 sbtPlugin := true
 
 addSbtJsEngine("1.3.7")
+
+ThisBuild / dynverVTagPrefix := false

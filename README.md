@@ -128,7 +128,7 @@ JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
 
 1.0.8 - June, 2025
 
-- Removed sbt-ci-release, since it causes issues when building and we're not using it for releases
+- Added dynverVTagPrefix := false, since it otherwise causes issues when building and we're not using it for releases
 
 1.0.7 - March, 2023
 
